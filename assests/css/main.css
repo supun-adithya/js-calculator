@@ -1,0 +1,56 @@
+body{
+    background-image: url(/assests/img/background.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+
+.cal_wrapper{
+    border: 5px solid #FFFFFF;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    margin-top: 25vh;
+    background-color:#4667B8;
+    
+}
+
+.display{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 98%;
+    color: red;
+    background-color: antiquewhite;
+}
+
+.display_input{
+    background-color: #faebd7;
+    caret-color: transparent;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    border: none;
+    
+}
+.cal_btn{
+    background-color: #ffebec;
+    color: #2b8bd8;
+    height: 50px;
+    width: 100%;
+    border: none;
+}
+
+.cal_btn:hover{
+    background-color: #A692C7;
+    width: 100%;
+    border:5px groove;
+}
+
+.col{
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha256-wLz3iY/cO4e6vKZ4zRmo4+9XDpMcgKOvv/zEU3OMlRo=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap-grid.css" integrity="sha256-dA0sMMarH6f9nXmoG8n2UtTPgdML+FQEIQafdAdkmjY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="assests/css/main.css">
+    
+
+</head>
+<body>
+    <div class="cal_wrapper">
+        <div class="row  ">
+            <div class="display" id="">
+                <input type="text" class="display_input" id="result">
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col"><input type="button" value="("  class="cal_btn" onClick="display('(')"></button></div>
+            <div class="col"><input type="button" value=")" class="cal_btn" onClick="display(')')"></button></div>
+            <div class="col"><input type="button" value="%" class="cal_btn" onClick="display('%')"></button></div>
+            <div class="col"><input type="button" value="/" class="cal_btn" onClick="display('/')"></button></div>
+        </div>
+        <div class="row">
+            <div class="col"><input type="button" value="7" class="cal_btn" onClick="display('7')"></button></div>
+            <div class="col"><input type="button" value="8"  class="cal_btn" onClick="display('8')"></button></div>
+            <div class="col"><input type="button" value="9" class="cal_btn" onClick="display('9')"></button></div>
+            <div class="col"><input type="button" value="X" class="cal_btn" onClick="display('*')"></button></div>
+        </div>
+        <div class="row">
+            <div class="col"><input type="button" value="4" class="cal_btn" onClick="display('4')"></button></div>
+            <div class="col"><input type="button" value="5"  class="cal_btn" onClick="display('5')"></button></div>
+            <div class="col"><input type="button" value="6" class="cal_btn" onClick="display('6')"></button></div>
+            <div class="col"><input type="button" value="-" class="cal_btn" onClick="display('-')"></button></div>
+        </div>
+        <div class="row">
+            <div class="col"><input type="button" value="1" class="cal_btn" onclick="display('1')"></button></div>
+            <div class="col"><input type="button" value="2"  class="cal_btn" onclick="display('2')"></button></div>
+            <div class="col"><input type="button" value="3" class="cal_btn" onclick="display('3')"></button></div>
+            <div class="col"><input type="button" value="+" class="cal_btn" onclick="display('+')"></button></div>
+        </div>
+        <div class="row">
+            <div class="col"><input type="button" value="0" class="cal_btn" onclick="display('0')"></button></div>
+            <div class="col"><input type="button" value="."  class="cal_btn" onclick="display('.')"></button></div>
+            <div class="col"><input type="button" value="AC" class="cal_btn" onclick="clearScreen()"></button></div>
+            <div class="col"><input type="button" value="=" class="cal_btn" id="sum" onclick="equal()"></button></div>
+        </div>
+    </div>
+    
+
+<!-- js -->
+
+<script>
+
+    // calculator 
+
+    function display(val){
+    document.getElementById('result').value += val
+    return val
+
+    }
+
+    function equal() {
+        let x=document.getElementById('result').value
+        let y=eval(x)
+
+        document.getElementById('result').value = y
+
+        return y
+    }
+
+    function clearScreen(){
+
+    document.getElementById('result').value = ''
+
+    }
+    
+    document.addEventListener('keydown' ,function(event){
+        if(event.keyCode===13){
+            document.getElementById('sum').click()
+        }
+    },true)
+
+
+
+    // disable keyboard input
+
+    
+
+    // snow animation
+
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha256-m81NDyncZVbr7v9E6qCWXwx/cwjuWDlHCMzi9pjMobA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.js" integrity="sha256-TqbemDLI4XxVoyOpffv+FTL5oPnnT0a/qWLJy2/ANeg=" crossorigin="anonymous"></script>
+<script src="assests/js/snow.js"></script> <!-- source -https://codepen.io/massiebn/pen/OJMbXz  -->
+
+
+  
+
+</body>
+</html>
