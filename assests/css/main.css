@@ -65,9 +65,8 @@ body{
 }
 
 .cal_btn:hover{
-    background-color: #A692C7;
+    background-color: #aea5bd;
     width: 100%;
-    border:5px groove;
 }
 
 .col{
