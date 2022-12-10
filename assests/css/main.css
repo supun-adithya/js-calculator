@@ -20,7 +20,7 @@ body{
 }
 
 .cal_heading{
-    margin-top: 20px;
+    margin-top: 40px;
     -webkit-text-stroke: 1px #FFFFFF;
     text-align: center;
     align-items: center;
@@ -33,7 +33,7 @@ body{
     padding: 15px;
     width: 500px;
     margin: auto;
-    margin-top: 15vh;
+    margin-top: 12vh;
     background-color:#4667B8;
     
 }
@@ -48,9 +48,10 @@ body{
 
 .display_input{
     background-color: #faebd7;
+    font-weight: bold;
     caret-color: transparent;
     outline: none;
-    height: 50px;
+    height: 70px;
     width: 100%;
     border: none;
     

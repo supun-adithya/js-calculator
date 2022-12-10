@@ -22,14 +22,14 @@
     <div class="cal_wrapper"> 
         <div class="row  ">
             <div class="display" id="">
-                <input type="text" class="display_input" id="result">
+                <input type="text" class="display_input" placeholder="0" id="result">
             </div>
         </div>
         <div class="row ">
-            <div class="col"><input type="button" value="("  class="cal_btn" onClick="display('(')"></button></div>
-            <div class="col"><input type="button" value=")" class="cal_btn" onClick="display(')')"></button></div>
-            <div class="col"><input type="button" value="%" class="cal_btn" onClick="display('%')"></button></div>
+            <div class="col"><input type="button" value="%"  class="cal_btn" onClick="display('%')"></button></div>
             <div class="col"><input type="button" value="/" class="cal_btn" onClick="display('/')"></button></div>
+            <div class="col"><input type="button" value="!" class="cal_btn" onClick="display('*','*')"></button></div>
+            <div class="col"><input type="button" value="b" class="cal_btn" id="back" onClick="back()"></button></div>
         </div>
         <div class="row">
             <div class="col"><input type="button" value="7" class="cal_btn" onClick="display('7')"></button></div>
@@ -52,7 +52,7 @@
         <div class="row">
             <div class="col"><input type="button" value="0" class="cal_btn" onclick="display('0')"></button></div>
             <div class="col"><input type="button" value="."  class="cal_btn" onclick="display('.')"></button></div>
-            <div class="col"><input type="button" value="AC" class="cal_btn" onclick="clearScreen()"></button></div>
+            <div class="col"><input type="button" value="AC" class="cal_btn" id="clear" onclick="clearScreen()"></button></div>
             <div class="col"><input type="button" value="=" class="cal_btn" id="sum" onclick="equal()"></button></div>
         </div>
     </div>
@@ -87,14 +87,36 @@
     document.getElementById('result').value = ''
 
     }
+
+    function back(){
+    const cvalue= document.getElementById('result').value
+    const editedvalue = cvalue.slice(0, -1)
+    document.getElementById('result').value = editedvalue
+    }
     
-    document.addEventListener('keydown' ,function(event){
-        if(event.keyCode===13){
-            document.getElementById('sum').click()
-        }
-    },true)
 
+    const number_btn = [1,2,3,4,5,6,7,8,9,0]
+    const operators= ['+','-','*','/','.']
 
+    document.addEventListener('keydown', (event) => {
+    let keyvalue = event.key;
+    if(number_btn.indexOf(parseInt(keyvalue))>=0||operators.indexOf(keyvalue)>=0){
+        display(keyvalue);
+    }
+  
+    else if (keyvalue == "c"){
+        document.getElementById('clear').click()
+    }
+    else if (event.keyCode=== 8){
+        document.getElementById('back').click()
+    }
+    else if (keyvalue == "Enter"){
+        document.getElementById('sum').click()
+    }
+   
+
+  });
+        
 
     // disable keyboard input
 
