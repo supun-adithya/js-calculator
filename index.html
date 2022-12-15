@@ -24,7 +24,7 @@
     <div class="cal_wrapper"> 
         <div class="row  ">
             <div class="display" id="">
-                <input type="text" class="display_input" placeholder="0" id="result">
+                <input type="text" class="display_input" placeholder="0" id="result" disabled>
             </div>
         </div>
         <div class="row ">
@@ -119,16 +119,13 @@
 
   });
         
-
-    // disable keyboard input
-
-    
-
     // snow animation
 
     if (document.location.search.match(/type=embed/gi)) {
       window.parent.postMessage("resize", "*");
     }
+
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha256-m81NDyncZVbr7v9E6qCWXwx/cwjuWDlHCMzi9pjMobA=" crossorigin="anonymous"></script>
