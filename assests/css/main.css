@@ -2,7 +2,8 @@
 
 body{
     background-image: url(/assests/img/background.jpg);
-    background-size: 100vw 100vh;
+    /* background-size: 100vw 100vh; */
+    background-size: 100% ;
     background-repeat: no-repeat;
 }
 
