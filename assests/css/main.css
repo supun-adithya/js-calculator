@@ -78,3 +78,17 @@ body{
     margin-left: 5px;
     margin-right: 5px;
 }
+
+@media screen and (max-width:600px) {
+    body{
+        background-size: 500vh;
+        width: 100%;
+        height: 100%;
+        background-color: #4667B8 
+    }
+
+    .cal_wrapper{
+        width: 90%;
+    }
+    
+}
